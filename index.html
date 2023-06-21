@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <main>
+    <div class="header">
+      <div class="header-title">
+        <img src="./images/logo.svg" alt="logo" onclick="CloseNav()">
+        <!-- mobile menu -->
+        <button class="hamburger" onclick="Nav()"></button>
+
+        <ul class="desktop-menu">
+          <li><a href="">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Projects</a></li>
+          <li class="contact-desktop"><a href="">contact</a></li>
+        </ul>
+
+        <!-- desktop menu-->
+      </div>
+
+      <div onclick="CloseNav()" class="overlay" id="myNav" style="width: 0%;">
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Projects</a></li>
+        </ul>
+        <button class="contact">
+          contact
+        </button>
+      </div>
+
+      <h1>we are creatives</h1>
+      <!-- arrow down -->
+      <img class="arrow" src="./images/icon-arrow-down.svg" alt="icon-arrow-down">
+      <div class="nav-cancel" onclick="CloseNav()"></div>
+    </div>
+    <div class="grid-container1" onclick="CloseNav()">
+      <img src="./images/mobile/image-transform.jpg" alt="image-transform" class="mobile-images">
+      
+      <div class="text-content">
+        <h2>Transform your brand</h2>
+        <p>
+          We are a full-service creative agency
+          specializing in helping brands grow fast.
+          Engage your clients through compelling
+          visuals that do most of the marketing for you. 
+        </p>
+        <a href="" class="yellow">learn more</a>
+      </div>
+      <img src="./images/desktop/image-transform.jpg" alt="image-transform" class="desktop-images">
+      <img src="./images/mobile/image-stand-out.jpg" alt="image-stand-out" class="mobile-images">
+      <img src="./images/desktop/image-stand-out.jpg" alt="image-stand-out" class="desktop-images">
+      <div class="text-content">
+        <h2>Stand out to the right audience</h2>
+        <p>
+          Using a collaborative formula of
+          designers, researchers, photographers,
+          videographers, and copywriters, we'll
+          build and extend your brand in digital places.
+        </p>
+        <a href="" class="soft-red">learn more</a>
+      </div>
+      <div class="graphic-content cherry">
+        <h2>Graphic Design</h2>
+        <p>Great design makes you memorable. We deliver
+          artwork that underscores your brand message 
+          and captures potential clients attention.
+        </p>
+      </div>
+      <div class="graphic-content orange">
+        <h2>Photography</h2>
+        <p>Increase your credibility by getting the most
+          stunning, high-quality photos that improve your 
+          business image.
+        </p>
+      </div>
+    </div>
+    <h2 class="h-client">client testimonials</h2>
+
+    <div class="grid-container2">
+      <div class="person-content">
+        <img src="./images/image-emily.jpg" alt="image-emily">
+        <p class="description">We put our trust in Sunnyside and they
+          delivered, making sure our needs were
+          met and deadlines were always hit.
+        </p>
+        <p class="name">Emily R.</p>
+        <p class="profession">Marketing Director</p>
+      </div>
+
+      <div class="person-content">
+        <img src="./images/image-thomas.jpg" alt="image-thomas">
+        <p class="description">Sunnyside's enthusiasm coupled width 
+          their keen interest in our brand's success
+          made it a satisfying and enjoyable experience. 
+        </p>
+        <p class="name">Thomas S.</p>
+        <p class="profession">Chief Operating Officer</p>
+      </div>
+
+      <div class="person-content">
+        <img src="./images/image-jennie.jpg" alt="image-jennie">
+        <p class="description">Incredible end result! Our sales increased
+          over 400% when we worked with 
+          Sunnyside. Highly recommended!
+        </p>
+        <p class="name">Jennie F.</p>
+        <p class="profession">Business Owner</p>
+      </div>
+      
+    </div>
+    <div class="grid-container3">
+      <img src="./images/mobile/image-gallery-milkbottles.jpg" alt="image-gallery-milkbottles" class="mobile-images">
+      <img src="./images/mobile/image-gallery-orange.jpg" alt="image-gallery-orange" class="mobile-images">
+      <img src="./images/mobile/image-gallery-cone.jpg" alt="image-gallery-cone" class="mobile-images">
+      <img src="./images/mobile/image-gallery-sugar-cubes.jpg" alt="image-gallery-sugar-cubes" class="mobile-images">
+
+      <img src="./images/desktop/image-gallery-milkbottles.jpg" alt="image-gallery-milkbottles" class="desktop-images">
+      <img src="./images/desktop/image-gallery-orange.jpg" alt="image-gallery-orange" class="desktop-images">
+      <img src="./images/desktop/image-gallery-cone.jpg" alt="image-gallery-cone" class="desktop-images">
+      <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="image-gallery-sugar-cubes" class="desktop-images">
+    </div>
+    <div class="footer">
+      <img src="./images/logo.svg" alt="logo" class="logo">
+      <div class="flex-footer flex-around">
+        <a href="">About</a>
+        <a href="">Services</a>
+        <a href="">Projects</a>
+      </div>
+      <div class="flex-footer flex-center">
+        <a href=""><img src="./images/icon-facebook.svg" alt="icon-facebook"></a>
+        <a href=""><img src="./images/icon-instagram.svg" alt="icon-instagram"></a>
+        <a href=""><img src="./images/icon-twitter.svg" alt="icon-twitter"></a>
+        <a href=""><img src="./images/icon-pinterest.svg" alt="icon-pinterest"></a>
+
+      </div>
+    </div>
+  </main>
+  
+
+  <script>
+    var menu = document.getElementById("myNav");
+
+    function CloseNav(e){ 
+      menu.style.width = "0%";
+    }
+
+    function Nav(){
+      
+      if(menu.style.width == "0%"){
+        menu.style.width = "90%";
+      }
+      else if(menu.style.width == "90%"){
+        menu.style.width = "0%";
+      }
+    }
+    
+  </script>
+
+</body>
+</html>
